@@ -1,0 +1,13 @@
+[Unit]
+Description=Muse AI to OpenAI proxy (muse2api)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/hitokiri/muse/muse2api
+ExecStart=/home/hitokiri/muse/muse2api/.venv/bin/python -m muse2api
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
